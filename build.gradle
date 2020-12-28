@@ -4,14 +4,13 @@ buildscript {
     repositories {
         google()
         jcenter()
-       /* maven {
-            url " ENTER URL HERE"
+        maven {
+            url "https://jfrog.amani.ai/artifactory/amani-sdk"
             credentials {
                 username = "USERNAME"
                 password = "PASSWORD"
-
             }
-        }*/
+        }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.1.1"
@@ -27,14 +26,13 @@ allprojects {
         google()
         jcenter()
 
-        /*maven {
-            url " ENTER URL HERE"
+        maven {
+            url "https://jfrog.amani.ai/artifactory/amani-sdk"
             credentials {
                 username = "USERNAME"
                 password = "PASSWORD"
-
             }
-        }*/
+        }
     }
 }
 

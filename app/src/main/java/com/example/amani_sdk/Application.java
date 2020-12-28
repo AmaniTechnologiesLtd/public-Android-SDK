@@ -1,15 +1,15 @@
 package com.example.amani_sdk;
 
 
+import com.amani_ai.base.util.Amani;
 
 public class Application extends android.app.Application {
 
     @Override
     public void onCreate() {
         super.onCreate();
-        //Intialize here the amani SDk in Application Class
 
-        //Amani.init(this);
+        Amani.Companion.init(this);
 
     }
 }
