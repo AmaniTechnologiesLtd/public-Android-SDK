@@ -9,7 +9,7 @@ public class Application extends android.app.Application {
     public void onCreate() {
         super.onCreate();
 
-        Amani.Companion.init(this);
+        Amani.init(this);
 
     }
 }
