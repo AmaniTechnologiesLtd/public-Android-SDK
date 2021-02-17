@@ -68,7 +68,7 @@ allprojects {
 
 ### Example of usage:
  
- ```xml
+```xml
      <application
             ...
             
