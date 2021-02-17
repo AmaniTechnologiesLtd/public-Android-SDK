@@ -9,7 +9,7 @@ public class Application extends android.app.Application {
     public void onCreate() {
         super.onCreate();
 
-        Amani.init(this);
+        Amani.init(this,"https://demo.amani.ai/api/v1/","/v1");
 
     }
 }

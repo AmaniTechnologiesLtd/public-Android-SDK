@@ -1,20 +1,33 @@
 package com.example.amani_sdk
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.amani_ai.base.util.Amani
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
         Amani.getInstance().goToKycActivity(
-            this,
-            "ID",//ENTER TCIN NO HERE
-            "EMAIl",//   ENTER  EMAIL ID HERE
-            "PASSWORD"//ENTER PASSWORD HERE
-        )
+                this,
+                "ID",
+                "EMAIL",
+                "PASSWORD")
 
+    }
+
+
+    /**
+     * callBack Function ( IF VERIFICATION IS COMPLETED/INCOMPLETED. )
+     */
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        val verificationCompleted = Objects.requireNonNull(data)!!.getBooleanExtra("ON_SUCCESS", false)
+        if (verificationCompleted) {
+
+            //Do something!
+        }
     }
 }
