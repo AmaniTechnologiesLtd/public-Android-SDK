@@ -6,6 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.amani_ai.base.util.Amani
 import java.util.*
 
+    /**
+     * @param ID,
+     * @param TOKEN
+     */
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -13,11 +17,8 @@ class MainActivity : AppCompatActivity() {
         Amani.getInstance().goToKycActivity(
                 this,
                 "ID",
-                "EMAIL",
-                "PASSWORD")
-
+                "TOKEN")
     }
-
 
     /**
      * callBack Function ( IF VERIFICATION IS COMPLETED/INCOMPLETED. )

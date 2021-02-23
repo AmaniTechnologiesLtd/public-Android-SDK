@@ -9,18 +9,18 @@ This README would normally document whatever steps are necessary to get your app
    * Dependencies:
 
    1. Add the following dependencies to your Module build.gradle file.
-    ```gradle
+```gradle
      implementation 'ai.amani.android:AmaniAi:1.0.53' 
-    ```
+```
 ### Example of usage: ###
 
-    ```gradle
+```gradle
     dependencies { 
     
     implementation 'ai.amani.android:AmaniAi:1.0.53' // Add only this line
     
                 }  
-    ```
+```
 
    2. Enable DataBinding in the Module build.gradle by adding this line into code block of android {}:
    
@@ -41,7 +41,7 @@ This README would normally document whatever steps are necessary to get your app
   3. Add the following in the Project build.gradle within in buildscript within the buildscript->repositories and buildscript->allprojects.
 ```gradle  
     maven { url "https://jfrog.amani.ai/artifactory/amani-sdk"}
-  ```
+```
 ### Example of usage:
   
          ```gradle   
@@ -91,14 +91,13 @@ This README would normally document whatever steps are necessary to get your app
  * To Proceed for KYC Verification :
         
         
-    ```java    
+```java    
     Amani.getInstance().goToKycActivity(
                this,
               "ENTER TCIN NO HERE"
-              "ENTER  EMAIL ID HERE"
-              "ENTER PASSWORD HERE"
+              "ENTER  TOKEN HERE"
            )
-    ```
+```
         
 ### Example of usage:
 
@@ -107,8 +106,7 @@ This README would normally document whatever steps are necessary to get your app
     
     Amani.getInstance().goToKycActivity(this,
         "ENTER TCIN NO HERE", 
-        "ENTER  EMAIL ID HERE", 
-        "ENTER PASSWORD HERE"
+        "ENTER  TOKEN HERE", 
     );
 ```
 ## Call Back Function Usage ##
@@ -124,5 +122,5 @@ This README would normally document whatever steps are necessary to get your app
             }
         }
     }
-   ```    
+```    
 
