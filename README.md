@@ -102,7 +102,7 @@ allprojects {
 ### Example of usage:
 
 ```java
-    Amani.init(this); 
+    Amani.init(this,"server","version"); 
     
     Amani.getInstance().goToKycActivity(this,
         "ENTER TCIN NO HERE", 
