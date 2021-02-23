@@ -9,12 +9,12 @@ This README would normally document whatever steps are necessary to get your app
    * Dependencies:
 
    1. Add the following dependencies to your Module build.gradle file.
-```gradle
-     implementation 'ai.amani.android:AmaniAi:1.0.53' 
+```groovy
+implementation 'ai.amani.android:AmaniAi:1.0.53' 
 ```
 ### Example of usage: ###
 
-```gradle
+```groovy
     dependencies { 
     
     implementation 'ai.amani.android:AmaniAi:1.0.53' // Add only this line
@@ -24,19 +24,19 @@ This README would normally document whatever steps are necessary to get your app
 
    2. Enable DataBinding in the Module build.gradle by adding this line into code block of android {}:
    
-   ```gradle
-    dataBinding { enabled true  } 
-    ```
+```groovy
+dataBinding { enabled true  } 
+```
 ### Example of usage ###
      
-```gradle
-    android { 
+```groovy
+android { 
             ...
     
     dataBinding { enabled true } // Add only this line 
             ...
             }
-    ```
+```
 
   3. Add the following in the Project build.gradle within in buildscript within the buildscript->repositories and buildscript->allprojects.
 ```gradle  
@@ -44,8 +44,8 @@ This README would normally document whatever steps are necessary to get your app
 ```
 ### Example of usage:
   
-         ```gradle   
-            allprojects {
+```groovy
+allprojects {
             
         repositories {
             google()
@@ -57,7 +57,7 @@ This README would normally document whatever steps are necessary to get your app
     
             }
         }
-       ```
+```
 4. Go to AndroidManifest.xml, apply these lines!
  
 ```xml
@@ -68,7 +68,7 @@ This README would normally document whatever steps are necessary to get your app
 
 ### Example of usage:
  
- ```xml
+```xml
      <application
             ...
             
@@ -84,9 +84,9 @@ This README would normally document whatever steps are necessary to get your app
  
  * In the Application Class Initialize the SDk:    
  
-    ```java   
+```java   
     Amani.init(this,"server","version");
-    ```
+```
 
  * To Proceed for KYC Verification :
         
