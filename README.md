@@ -111,16 +111,39 @@ allprojects {
 ```
 ## Call Back Function Usage ##
 
-   * A function that allows you to see the result of the KYC process as completed / incomplete:  
+   * A function that allows you to access the following information after the user exits from the application.;
+   
+   1. Result of the KYC process as completed / incomplete 
+   2. Token is expired as true/false
+   3. List of the KYC step's information.
+   
 ```java
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-            super.onActivityResult(requestCode, resultCode, data)
-            val verificationCompleted = Objects.requireNonNull(data)!!.getBooleanExtra("ON_SUCCESS", false)
-            if (verificationCompleted) {
-    
-                //Do something!
-            }
-        }
-    }
+   override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+           super.onActivityResult(requestCode, resultCode, data)
+   
+           //Getting verification status true/false as boolean return.
+           val verificationCompleted = Objects.requireNonNull(data)!!.getBooleanExtra("ON_SUCCESS", false)
+   
+           //Getting token status true/false as boolean return.
+           val tokenExpired = Objects.requireNonNull(data)!!.getBooleanExtra("TOKEN_EXPIRED", false)
+   
+           //Getting list of KYC steps's information.
+           var stepList: Map<String, String>? = null
+           stepList = SessionManager.getRules()
+   
+   
+           for (i in 0 until stepList.size) {
+               Toast.makeText(this, stepList.toString(), Toast.LENGTH_LONG).show()
+           }
+   
+           if (verificationCompleted) {
+               //Do something!
+           }
+   
+           if (tokenExpired) {
+               //Do something!
+           }
+   
+       }
 ```    
 
