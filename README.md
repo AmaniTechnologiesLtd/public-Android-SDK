@@ -10,14 +10,14 @@ This README would normally document whatever steps are necessary to get your app
 
    1. Add the following dependencies to your Module build.gradle file.
 ```groovy
-implementation 'ai.amani.android:AmaniAi:1.0.57' 
+implementation 'ai.amani.android:AmaniAi:1.0.69' 
 ```
 ### Example of usage: ###
 
 ```groovy
     dependencies { 
     
-    implementation 'ai.amani.android:AmaniAi:1.0.57' // Add only this line
+    implementation 'ai.amani.android:AmaniAi:1.0.69' // Add only this line
     
                 }  
 ```
@@ -33,7 +33,7 @@ dataBinding { enabled true  }
 android { 
             ...
     
-    dataBinding { enabled true } // Add only this line 
+    dataBinding { enabled true } // Add this line to enable data binding feature.
             ...
             }
 ```
@@ -96,6 +96,9 @@ allprojects {
                this,
               "ENTER TCIN NO HERE"
               "ENTER  TOKEN HERE"
+              "ENTER BIRTH DATE HERE",
+              "ENTER EXPIRE DATE HERE",
+              "ENTER DOCUMENT NO HERE"  
            )
 ```
         
@@ -106,7 +109,10 @@ allprojects {
     
     Amani.getInstance().goToKycActivity(this,
         "ENTER TCIN NO HERE", 
-        "ENTER  TOKEN HERE", 
+        "ENTER  TOKEN HERE",
+        "ENTER BIRTH DATE HERE",
+        "ENTER EXPIRE DATE HERE",
+        "ENTER DOCUMENT NO HERE"
     );
 ```
 ## Call Back Function Usage ##

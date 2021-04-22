@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        Amani.getInstance().goToKycActivity(this,"ID OF CUSTOMER","TOKEN")
+        //"TOKEN" , "BIRTHDATE" and "DOCUMENT NO" is required for NFC Only step. They could be null.
+        Amani.getInstance().goToKycActivity(this,"ID OF CUSTOMER","TOKEN","BIRTH DATE","EXPIRE DATE","DOCUMENT NO")
     }
 
     /**
