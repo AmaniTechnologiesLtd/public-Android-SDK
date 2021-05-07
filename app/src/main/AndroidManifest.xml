@@ -10,8 +10,7 @@
         android:name=".Application"
         android:roundIcon="@drawable/amani_logo"
         android:supportsRtl="true"
-        tools:replace="android:theme,android:name"
-        android:theme="@style/Theme.AmaniSDk">
+        >
 
         <activity android:name=".MainActivity">
             <intent-filter>
