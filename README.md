@@ -88,7 +88,7 @@ allprojects {
     Amani.init(this,"server","version");
 ```
 
- * To Proceed for KYC Verification :
+ * To Proceed for KYC Verification : 
         
         
 ```java    
@@ -96,9 +96,9 @@ allprojects {
                this,
               "ENTER TCIN NO HERE"
               "ENTER  TOKEN HERE"
-              "ENTER BIRTH DATE HERE",
-              "ENTER EXPIRE DATE HERE",
-              "ENTER DOCUMENT NO HERE"  
+              "ENTER BIRTH DATE HERE",  //YYMMDD format. (For Example: 20 May 1990 is 900520).
+              "ENTER EXPIRE DATE HERE", //YYMMDD format.
+              "ENTER DOCUMENT NO HERE"  //Document number of your ID card.
            )
 ```
         
@@ -110,9 +110,9 @@ allprojects {
     Amani.getInstance().goToKycActivity(this,
         "ENTER TCIN NO HERE", 
         "ENTER  TOKEN HERE",
-        "ENTER BIRTH DATE HERE",
-        "ENTER EXPIRE DATE HERE",
-        "ENTER DOCUMENT NO HERE"
+        "ENTER BIRTH DATE HERE",  //YYMMDD format. (For Example: 20 May 1990 is 900520).
+        "ENTER EXPIRE DATE HERE", //YYMMDD format.
+        "ENTER DOCUMENT NO HERE". //Document number of your ID card.
     );
 ```
 ## Call Back Function Usage ##
