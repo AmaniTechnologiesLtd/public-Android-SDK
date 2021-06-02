@@ -1,4 +1,4 @@
-# README #
+# Amani SDK #
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
@@ -94,11 +94,14 @@ allprojects {
 ```java    
     Amani.getInstance().goToKycActivity(
                this,
-              "ENTER TCIN NO HERE"
-              "ENTER  TOKEN HERE"
-              "ENTER BIRTH DATE HERE",  //YYMMDD format. (For Example: 20 May 1990 is 900520).
-              "ENTER EXPIRE DATE HERE", //YYMMDD format.
-              "ENTER DOCUMENT NO HERE"  //Document number of your ID card.
+              "ENTER TCIN NO HERE",
+              "ENTER  TOKEN HERE",
+              "ENTER BIRTH DATE HERE",  // YYMMDD format. (For Example: 20 May 1990 is 900520).
+              "ENTER EXPIRE DATE HERE", // YYMMDD format.
+              "ENTER DOCUMENT NO HERE",  // Document number of your ID card.
+              "ENTER GEOLOCATION PERMISSION", // Boolean value of your geoLocation value. (true/false)
+              "ENTER LANGUAGE" // Language of your current application. (tr,en,zh etc.)   
+    
            )
 ```
         
@@ -113,6 +116,8 @@ allprojects {
         "ENTER BIRTH DATE HERE",  //YYMMDD format. (For Example: 20 May 1990 is 900520).
         "ENTER EXPIRE DATE HERE", //YYMMDD format.
         "ENTER DOCUMENT NO HERE". //Document number of your ID card.
+        "ENTER GEOLOCATION PERMISSION", // Boolean value of your geoLocation value. (true/false)
+        "ENTER LANGUAGE" // Language of your current application. (tr,en,zh etc.) 
     );
 ```
 ## Call Back Function Usage ##
@@ -139,17 +144,24 @@ allprojects {
    
    
            for (i in 0 until stepList.size) {
-               Toast.makeText(this, stepList.toString(), Toast.LENGTH_LONG).show()
+               Toast.makeText(this, stepList.toString(), Toast.LENGTH_LONG).show() // As an example of KYC step list.
            }
    
-           if (verificationCompleted) {
-               //Do something!
-           }
-   
+           if (verificationCompleted) // Verification is completed!
+           else // Verification incompleted!     
+
            if (tokenExpired) {
                //Do something!
            }
    
        }
 ```    
+
+## ProGuard Rule Usage ##
+    
+   * If you are using ProGuard in your application, you just need to add this line into your ProGuard Rules!
+   
+   ```java
+    -keep class com.amani_ai.jniLibrary.CroppedResult { *; }
+   ```     
 
