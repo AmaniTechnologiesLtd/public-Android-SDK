@@ -73,7 +73,6 @@ allprojects {
             ...
             
             android:name=".Application"
-            android:theme="@style/Theme.AmaniSDk"
             tools:replace="android:theme">
              
             ...
