@@ -14,8 +14,10 @@ public class Application extends android.app.Application {
     public void onCreate() {
         super.onCreate();
 
-
-        Amani.init(this,"https://demo.amani.ai/api/v1/","/v1");
+        /**
+         * "server_url_" is must located like that.
+         */
+        Amani.init(this,"https://server_url_/api/v1/","/v1");
 
     }
 }

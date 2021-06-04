@@ -10,14 +10,14 @@ This README would normally document whatever steps are necessary to get your app
 
    1. Add the following dependencies to your Module build.gradle file.
 ```groovy
-implementation 'ai.amani.android:AmaniAi:1.2.0' 
+implementation 'ai.amani.android:AmaniAi:1.2.1' 
 ```
 ### Example of usage: ###
 
 ```groovy
     dependencies { 
     
-    implementation 'ai.amani.android:AmaniAi:1.2.0' // Add only this line
+    implementation 'ai.amani.android:AmaniAi:1.2.1' // Add only this line
     
                 }  
 ```
@@ -131,27 +131,42 @@ allprojects {
    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
            super.onActivityResult(requestCode, resultCode, data)
    
-           //Getting verification status true/false as boolean return.
-           val verificationCompleted = Objects.requireNonNull(data)!!.getBooleanExtra("ON_SUCCESS", false)
-   
-           //Getting token status true/false as boolean return.
-           val tokenExpired = Objects.requireNonNull(data)!!.getBooleanExtra("TOKEN_EXPIRED", false)
-   
-           //Getting list of KYC steps's information.
-           var stepList: Map<String, String>? = null
-           stepList = SessionManager.getRules()
-   
-   
-           for (i in 0 until stepList.size) {
-               Toast.makeText(this, stepList.toString(), Toast.LENGTH_LONG).show() // As an example of KYC step list.
-           }
-   
-           if (verificationCompleted) // Verification is completed!
-           else // Verification incompleted!     
-
-           if (tokenExpired) {
-               //Do something!
-           }
+         //Getting verification status true/false as boolean return.
+          val verificationCompleted = Objects.requireNonNull(data)!!.getBooleanExtra("ON_SUCCESS", false)
+  
+          //Getting token status true/false as boolean return.
+          val tokenExpired = Objects.requireNonNull(data)!!.getBooleanExtra("TOKEN_EXPIRED", false)
+  
+          //Getting network connection true/false
+          val networkError = Objects.requireNonNull(data)!!.getBooleanExtra("ON_NETWORK_ERROR", false)
+  
+          //Getting HTTPS's error codes if there is any API exception.
+          val apiException = Objects.requireNonNull(data)!!.getIntExtra("ON_API_EXCEPTION", 10000)
+  
+          //Getting list of KYC steps's information.
+          try {
+              var stepList: Map<String, String>? = null
+              stepList = SessionManager.getRules()
+          }catch (e: Exception) {
+              Log.d("TAG", "onActivityResult: stepList is null")}
+  
+  
+          if (verificationCompleted) {
+              //Do something!
+          }
+  
+          if (tokenExpired) {
+              //Your token is expired.
+          }
+  
+          if (networkError){
+              // Check your internet connection, please.
+          }
+  
+          if (apiException == 401) // HTTPS Error: 401
+              //...                //HTPS Error: apiException
+                  //...            //HTPS Error: apiException
+                      //...        //HTPS Error: apiException
    
        }
 ```    
