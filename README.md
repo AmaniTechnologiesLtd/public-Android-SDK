@@ -10,14 +10,14 @@ This README would normally document whatever steps are necessary to get your app
 
    1. Add the following dependencies to your Module build.gradle file.
 ```groovy
-implementation 'ai.amani.android:AmaniAi:1.2.10' 
+implementation 'ai.amani.android:AmaniAi:1.2.13' 
 ```
 ### Example of usage: ###
 
 ```groovy
     dependencies { 
     
-    implementation 'ai.amani.android:AmaniAi:1.2.10' // Add only this line
+    implementation 'ai.amani.android:AmaniAi:1.2.13' // Add only this line
     
                 }  
 ```
@@ -93,15 +93,18 @@ allprojects {
 ```java    
     Amani.getInstance().goToKycActivity(
                this,
-              "ENTER TCIN NO HERE",
-              "ENTER  TOKEN HERE",
-              "ENTER BIRTH DATE HERE",  // YYMMDD format. (For Example: 20 May 1990 is 900520).
-              "ENTER EXPIRE DATE HERE", // YYMMDD format.
-              "ENTER DOCUMENT NO HERE",  // Document number of your ID card.
-              "ENTER GEOLOCATION PERMISSION", // Boolean value of your geoLocation value. (true/false)
-              "ENTER LANGUAGE" // Language of your current application. (tr,en,zh etc.)   
+              "ENTER TCIN NO HERE", //(Can not be null or empty)
+              "ENTER  TOKEN HERE", //(Can not be null or empty)
+              "ENTER BIRTH DATE HERE",  // YYMMDD format. (For Example: 20 May 1990 is 900520). (Can be empty if NFC is not used.)
+              "ENTER EXPIRE DATE HERE", // YYMMDD format.(Can be empty if NFC is not used.)
+              "ENTER DOCUMENT NO HERE",  // Document number of your ID card. (Can be empty if NFC is not used.)
+              "ENTER GEOLOCATION PERMISSION", // Boolean value of your geoLocation value(true/false). (Default value: "tr")
+              "ENTER LANGUAGE", // Language of your current application. (tr,en,zh etc.) (Default value: true)
+              "ENTER USER's EMAIL", // Must be in EMAIL format! (@Nullable or empty if not needed.)
+              "ENTER USER's PHONE NUMBER", // Phone number of user. (@Nullable or empty if not needed.)
+              "ENTER FULL NAME OF USER" // Full name of user. (@Nullable or empty if not needed.)
     
-           )
+           );
 ```
         
 ### Example of usage:
@@ -109,15 +112,20 @@ allprojects {
 ```java
     Amani.init(this,"server","version"); 
     
-    Amani.getInstance().goToKycActivity(this,
-        "ENTER TCIN NO HERE", 
-        "ENTER  TOKEN HERE",
-        "ENTER BIRTH DATE HERE",  //YYMMDD format. (For Example: 20 May 1990 is 900520).
-        "ENTER EXPIRE DATE HERE", //YYMMDD format.
-        "ENTER DOCUMENT NO HERE". //Document number of your ID card.
-        "ENTER GEOLOCATION PERMISSION", // Boolean value of your geoLocation value. (true/false)
-        "ENTER LANGUAGE" // Language of your current application. (tr,en,zh etc.) 
-    );
+      Amani.getInstance().goToKycActivity(
+               this,
+              "ENTER TCIN NO HERE", //(Can not be null or empty)
+              "ENTER  TOKEN HERE",  //(Can not be null or empty)
+              "810519",  // YYMMDD format. (Example: 19 May 1981 -> 810519 ). (Can be empty if NFC is not used.)
+              "290120", // YYMMDD format. (Example: 20 Jan 2029 -> 290120 )(Can be empty if NFC is not used.)
+              "ENTER DOCUMENT NO HERE",  // Document number of your ID card. (Can be empty if NFC is not used.)
+              true, // Boolean value of your geoLocation value(true/false). (Default value: "tr")
+              "tr", // Language of your current application. (tr,en,zh etc.) (Default value: true)
+              "email@gmail.com", // Must be in EMAIL format! (@Nullable or empty if not needed.)
+              "0(542) xxx xx xx", // Phone number of user. (@Nullable or empty if not needed.)
+              "Name Surname" // Full name of user. (@Nullable or empty if not needed.)
+    
+           );
 ```
 ## Call Back Function Usage ##
 
