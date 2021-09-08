@@ -10,14 +10,14 @@ This README would normally document whatever steps are necessary to get your app
 
    1. Add the following dependencies to your Module build.gradle file.
 ```groovy
-implementation 'ai.amani.android:AmaniAi:1.2.13' 
+implementation 'ai.amani.android:AmaniAi:1.2.14' 
 ```
 ### Example of usage: ###
 
 ```groovy
     dependencies { 
     
-    implementation 'ai.amani.android:AmaniAi:1.2.13' // Add only this line
+    implementation 'ai.amani.android:AmaniAi:1.2.14' // Add only this line
     
                 }  
 ```
@@ -178,6 +178,49 @@ allprojects {
    
        }
 ```    
+## Event-Fire Callback ##
+    
+    Event fire mechanism returns you as a simple callback. This callback contains string value of; EventType, EventName, EventParams. 
+
+### Event Types ###
+We are currently supporting two types of event.
+  * ButtonPressed
+  * Upload
+  
+### Event Names ###
+We are currently supporting different kind of names. 
+
+  * ManualCrop
+  * Upload  
+  * TryAgain
+  * TakePhoto
+  * OpenCameraButton
+  * ClearButton
+  * UploadButton
+  * DownloadButton
+  
+  ### Event Params ###
+We are currently supporting different kind of params. EventParams might be response of upload as string ("OK","ERROR"), "BackSide", "FrontSide" of documents.
+
+### Event Fire CallBack Function Sample Usage ###
+
+```java
+     
+        EventFire eventFire = new EventFire();
+        eventFire.setEventListener((type, name, parameter) ->
+                Log.d("TAG", "onEvent: "
+                        + "\ntypes:" + type // Type returns list of EventType
+                        + "\nnames:" + name // Name returns name of document. (If there is more than one document, it returns title of the button that is clicked.)
+                        + "\nparams " + parameter // Parameter returns response of upload.
+                        )
+        );
+    
+   ```   
+
+
+    
+    
+    
 
 ## ProGuard Rule Usage ##
     
