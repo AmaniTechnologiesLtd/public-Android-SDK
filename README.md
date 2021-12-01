@@ -209,9 +209,9 @@ We are currently supporting different kind of params. EventParams might be respo
         EventFire eventFire = new EventFire();
         eventFire.setEventListener((type, name, parameter) ->
                 Log.d("TAG", "onEvent: "
-                        + "\ntypes:" + type // Type returns list of EventType
-                        + "\nnames:" + name // Name returns name of document. (If there is more than one document, it returns title of the button that is clicked.)
-                        + "\nparams " + parameter // Parameter returns response of upload.
+                        + "\ntype:" + type // EventType ()
+                        + "\nname:" + name // Amani Event Name. If there is more than one document, it returns the type of that document group. If there is a document, it returns the type of the document (the document type returns to you according to Amani standards).
+                        + "\nparams " + parameter // Parameter returns response of upload and doccument type, or action names(If action names performed).
                         )
         );
     
