@@ -10,14 +10,14 @@ This README would normally document whatever steps are necessary to get your app
 
    1. Add the following dependencies to your Module build.gradle file.
 ```groovy
-implementation 'ai.amani.android:AmaniAi:1.2.20' 
+implementation 'ai.amani.android:AmaniAi:1.2.22' 
 ```
 ### Example of usage: ###
 
 ```groovy
     dependencies { 
     
-    implementation 'ai.amani.android:AmaniAi:1.2.20' // Add only this line
+    implementation 'ai.amani.android:AmaniAi:1.2.22' // Add only this line
     
                 }  
 ```
@@ -81,10 +81,10 @@ allprojects {
 
 ## Initialization ##
  
- * In the Application Class Initialize the SDk:    
+ * In the Application Class Initialize the SDk: 
  
 ```java   
-    Amani.init(this,"server","version");
+    Amani.init(this,"server"); // WARNING! It must be called at least once before other functions are called.   
 ```
 
  * To Proceed for KYC Verification : 
