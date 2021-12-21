@@ -91,7 +91,7 @@ allprojects {
         
         
 ```java    
-    Amani.getInstance().goToKycActivity(
+    Amani.goToKycActivity(
                this,
               "ENTER TCIN NO HERE", //(Can not be null or empty)
               "ENTER  TOKEN HERE", //(Can not be null or empty)
@@ -112,7 +112,7 @@ allprojects {
 ```java
     Amani.init(this,"server","version"); 
     
-      Amani.getInstance().goToKycActivity(
+      Amani.goToKycActivity(
                this,
               "ENTER TCIN NO HERE", //(Can not be null or empty)
               "ENTER  TOKEN HERE",  //(Can not be null or empty)
