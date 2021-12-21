@@ -10,14 +10,14 @@ This README would normally document whatever steps are necessary to get your app
 
    1. Add the following dependencies to your Module build.gradle file.
 ```groovy
-implementation 'ai.amani.android:AmaniAi:1.2.22' 
+implementation 'ai.amani.android:AmaniAi:1.2.24' 
 ```
 ### Example of usage: ###
 
 ```groovy
     dependencies { 
     
-    implementation 'ai.amani.android:AmaniAi:1.2.22' // Add only this line
+    implementation 'ai.amani.android:AmaniAi:1.2.24' // Add only this line
     
                 }  
 ```
@@ -110,7 +110,7 @@ allprojects {
 ### Example of usage:
 
 ```java
-    Amani.init(this,"server","version"); 
+    Amani.init(this,"server"); 
     
       Amani.goToKycActivity(
                this,
