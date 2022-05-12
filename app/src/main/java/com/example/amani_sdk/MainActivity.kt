@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         //"TOKEN" , "BIRTHDATE" and "DOCUMENT NO" is required for NFC Only step. They could be null. geoLocation is up to you!
-        Amani.getInstance().goToKycActivity(this, "ID OF CUSTOMER", "TOKEN", "YYMMDD", "YYMMDD","DOCUMENT NO",true,"tr")
+        Amani.goToKycActivity(this, "ID OF CUSTOMER", "TOKEN", "YYMMDD", "YYMMDD","DOCUMENT NO",true,"tr")
     }
 
     /**
