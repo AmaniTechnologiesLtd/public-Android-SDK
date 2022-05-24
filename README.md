@@ -85,7 +85,7 @@ allprojects {
  
 ```java   
     Amani.init(this,"server","SHARED_SECRET"); // WARNING! It must be called at least once before other functions are called.   
-                                               // If you want to disable Signatur, leave SHARED_SECRET as empty.
+                                               // If you want to disable Signature, leave SHARED_SECRET as empty.
                                                // SHARED_SECRET will be provided from Amani if needed.
 ```
 
