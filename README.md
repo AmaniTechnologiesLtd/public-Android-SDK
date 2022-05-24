@@ -10,14 +10,14 @@ This README would normally document whatever steps are necessary to get your app
 
    1. Add the following dependencies to your Module build.gradle file.
 ```groovy
-implementation 'ai.amani.android:AmaniAi:1.2.45' 
+implementation 'ai.amani.android:AmaniAi:1.2.50'
 ```
 ### Example of usage: ###
 
 ```groovy
     dependencies { 
     
-    implementation 'ai.amani.android:AmaniAi:1.2.45' // Add only this line
+    implementation 'ai.amani.android:AmaniAi:1.2.50' // Add only this line
     
                 }  
 ```
@@ -227,24 +227,29 @@ We are currently supporting different kind of params. EventParams might be respo
    * If you are using ProGuard in your application, you just need to add this line into your ProGuard Rules!
    
    ```java
--keep class com.amani_ai** {*;}
--dontwarn com.amani.ai**
+-keep class com.amani_ml** {*;}
+-dontwarn com.amani.ml**
 -keep class datamanager.** {*;}
 -dontwarn datamanager.**
 -keep class networkmanager.** {*;}
 -dontwarn networkmanager.**
+-keep class com.amani_ai.jniLibrary.CroppedResult { *; }
 
 -keep class org.jmrtd.** { *; }
 -keep class net.sf.scuba.** {*;}
 -keep class org.bouncycastle.** {*;}
 -keep class org.spongycastle.** {*;}
 -keep class org.ejbca.** {*;}
--keep class com.amani_ai.jniLibrary.CroppedResult { *; }
 
 -dontwarn org.ejbca.**
 -dontwarn org.bouncycastle.**
 -dontwarn org.spongycastle.**
 -dontwarn org.jmrtd.**
 -dontwarn net.sf.scuba.**
+
+-keep class org.tensorflow.lite**{ *; }
+-dontwarn org.tensorflow.lite.**
+-keep class org.tensorflow.lite.support**{ *; }
+-dontwarn org.tensorflow.lite.support**
    ```     
 

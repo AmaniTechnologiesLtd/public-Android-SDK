@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         //"TOKEN" , "BIRTHDATE" and "DOCUMENT NO" is required for NFC Only step. They could be null. geoLocation is up to you!
-        Amani.getInstance().goToKycActivity(this, "ID OF CUSTOMER", "TOKEN", "YYMMDD", "YYMMDD","DOCUMENT NO",true,"tr")
+        Amani.goToKycActivity(this, "ID OF CUSTOMER", "TOKEN", "YYMMDD", "YYMMDD","DOCUMENT NO","tr")
     }
 
     /**
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         //Getting list of KYC steps's information.
         try {
             var stepList: Map<String, String>? = null
-            stepList = SessionManager.getRules()
+            stepList = SessionManager.getRules(this)
         }catch (e: Exception) {
             Log.d("TAG", "onActivityResult: stepList is null")}
 
