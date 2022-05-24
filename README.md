@@ -84,7 +84,9 @@ allprojects {
  * In the Application Class Initialize the SDk: 
  
 ```java   
-    Amani.init(this,"server"); // WARNING! It must be called at least once before other functions are called.   
+    Amani.init(this,"server","SHARED_SECRET"); // WARNING! It must be called at least once before other functions are called.   
+                                               // If you want to disable Signatur, leave SHARED_SECRET as empty.
+                                               // SHARED_SECRET will be provided from Amani if needed.
 ```
 
  * To Proceed for KYC Verification : 
