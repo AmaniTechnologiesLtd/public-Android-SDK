@@ -1,4 +1,6 @@
 # Amani SDK #
+![AmaniSDKHeader](https://user-images.githubusercontent.com/75306240/187692619-726115b8-3a92-4c7d-b85d-44a75d6556c1.png)
+
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
