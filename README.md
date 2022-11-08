@@ -12,14 +12,14 @@ This README would normally document whatever steps are necessary to get your app
 
    1. Add the following dependencies to your Module build.gradle file.
 ```groovy
-implementation 'ai.amani.android:AmaniAi:1.2.53'
+implementation 'ai.amani.android:AmaniAi:1.2.61'
 ```
 ### Example of usage: ###
 
 ```groovy
     dependencies { 
     
-    implementation 'ai.amani.android:AmaniAi:1.2.53' // Add only this line
+    implementation 'ai.amani.android:AmaniAi:1.2.61' // Add only this line
     
                 }  
 ```

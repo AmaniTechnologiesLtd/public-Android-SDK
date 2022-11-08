@@ -44,7 +44,8 @@ class MainActivity : AppCompatActivity() {
             var stepList: Map<String, String>? = null
             stepList = SessionManager.getRules(this)
         }catch (e: Exception) {
-            Log.d("TAG", "onActivityResult: stepList is null")}
+            Log.d("TAG", "onActivityResult: stepList is null")
+        }
 
 
         if (verificationCompleted) {
