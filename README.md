@@ -73,6 +73,14 @@ allprojects {
         tools:replace="android:theme" 
 ```
 
+5. Add the following pom to the dependencies section of your gradle build ﬁle :
+
+```groovy
+  aaptOptions {
+    noCompress "tflite"
+}
+```   
+
 
 ### Example of usage:
  
