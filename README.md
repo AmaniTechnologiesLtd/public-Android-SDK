@@ -5,6 +5,12 @@
 This README would normally document whatever steps are necessary to get your application up and running.
 
 
+## General Requirements
+
+The minimum requirements for the SDK are:
+
+* minSdkVersion 21
+* compileSdkVersion 31 
 
 ## How do I get set up? ##
 
@@ -12,14 +18,14 @@ This README would normally document whatever steps are necessary to get your app
 
    1. Add the following dependencies to your Module build.gradle file.
 ```groovy
-implementation 'ai.amani.android:AmaniAi:1.2.61'
+implementation 'ai.amani.android:AmaniAi:1.2.65'
 ```
 ### Example of usage: ###
 
 ```groovy
     dependencies { 
     
-    implementation 'ai.amani.android:AmaniAi:1.2.61' // Add only this line
+    implementation 'ai.amani.android:AmaniAi:1.2.65' // Add only this line
     
                 }  
 ```
