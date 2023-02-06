@@ -2,3 +2,4 @@
 .gradle/
 .idea/
 local.properties
+app/src/main/java/com/example/amani_sdk/CredProperties.kt
