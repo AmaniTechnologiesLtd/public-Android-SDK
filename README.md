@@ -244,7 +244,7 @@ We are currently supporting different kind of params. EventParams might be respo
     
    * If you are using ProGuard in your application, you just need to add this line into your ProGuard Rules!
    
-   ```java
+   ```groovy
 -keep class com.amani_ml** {*;}
 -dontwarn com.amani.ml**
 -keep class datamanager.** {*;}
