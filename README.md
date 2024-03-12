@@ -18,14 +18,14 @@ The minimum requirements for the SDK are:
 
    1. Add the following dependencies to your Module build.gradle file.
 ```groovy
-implementation 'ai.amani.android:AmaniAi:1.3.1'
+implementation 'ai.amani.android:AmaniAi:1.3.2'
 ```
 ### Example of usage: ###
 
 ```groovy
     dependencies { 
     
-    implementation 'ai.amani.android:AmaniAi:1.3.1' // Add only this line
+    implementation 'ai.amani.android:AmaniAi:1.3.2' // Add only this line
     
                 }  
 ```
