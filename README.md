@@ -238,10 +238,12 @@ We are currently supporting different kind of params. EventParams might be respo
 
 ## Gradle Properties
 
-Disable R8 full mode.
+Disable R8 full mode, use AndroidX and enable Jetifier like below;
 
    ```properties
   android.enableR8.fullMode=false
+  android.useAndroidX=true
+  android.enableJetifier=true
  ```
 
 
