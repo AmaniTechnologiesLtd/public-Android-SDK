@@ -236,9 +236,14 @@ We are currently supporting different kind of params. EventParams might be respo
    ```   
 
 
-    
-    
-    
+## Gradle Properties
+
+Disable R8 full mode.
+
+   ```properties
+  android.enableR8.fullMode=false
+ ```
+
 
 ## ProGuard Rule Usage ##
     
@@ -269,5 +274,12 @@ We are currently supporting different kind of params. EventParams might be respo
 -dontwarn org.tensorflow.lite.**
 -keep class org.tensorflow.lite.support**{ *; }
 -dontwarn org.tensorflow.lite.support**
+
+-dontwarn org.conscrypt.Conscrypt$Version
+-dontwarn org.conscrypt.Conscrypt
+-dontwarn org.conscrypt.ConscryptHostnameVerifier
+-dontwarn org.openjsse.javax.net.ssl.SSLParameters
+-dontwarn org.openjsse.javax.net.ssl.SSLSocket
+-dontwarn org.openjsse.net.ssl.OpenJSSE
    ```     
 
